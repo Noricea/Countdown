@@ -16,10 +16,12 @@ new cDatePart(
     document.querySelector(".showCurrentDate")
 );
 
+var func = 20;
+
 new showTargetTime(
-    document.querySelector(".showTargetTime")
+    document.querySelector(".showTargetTime", 21)
 );
 
 new showRemainingTime(
-    document.querySelector(".showRemainingTime", 10, 0)
+    document.querySelector(".showRemainingTime")
 );

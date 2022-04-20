@@ -1,6 +1,11 @@
 export default class showTargetTime {
-    constructor(root){
+
+    tHours = new Date().getHours() + 2 % 24;
+
+    constructor(root, hour){
         root.innerHTML = showTargetTime.getHTML();
+
+        this.tHours = hour;
 
         this.el = {
             hours: root.querySelector(".tDatePartHours"),
@@ -13,9 +18,13 @@ export default class showTargetTime {
         setInterval(() => { this.updateInterfaceTime(), 1000 });
     }
 
+    get endDate() {
+        return new Date().getHours() + 2 % 24;
+    }
+
     updateInterfaceTime(){
-        const hours = new Date().getHours() + 2 % 24;
-        const minutes = 0;
+        const hours = 22;
+        const minutes = 5;
         const seconds = 0;
 
         this.el.hours.textContent = hours.toString().padStart(2, "0");

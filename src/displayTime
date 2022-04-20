@@ -1,0 +1,11 @@
+
+setInterval(() => {
+    updateTime(), 1000
+});
+
+function updateTime(){
+    var today = new Date();
+    var Time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    document.getElementById("time").innerHTML = Time;
+}
+

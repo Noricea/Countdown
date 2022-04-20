@@ -2,8 +2,7 @@ export default class showRemainingTime {
     constructor(root){
         root.innerHTML = showRemainingTime.getHTML();
 
-        this.tHours = 0;
-        this.tMinutes = 0;
+        
         this.el = {
             hours: root.querySelector(".showRemainingTimeHours"),
             minutes: root.querySelector(".showRemainingTimeMinutes")
@@ -15,8 +14,11 @@ export default class showRemainingTime {
     }
 
     updateInterfaceTime(){
-        const hours = (new Date().getHours() + 2) % 24 - new Date().getHours() - 1;
-        const minutes = 60 - new Date().getMinutes() % 59;
+        const tHours = (new Date().getHours() + 1) % 24;
+        const tMinutes = 60;
+
+        const hours = tHours % 24 - new Date().getHours() - 1;
+        const minutes = tMinutes - new Date().getMinutes() % 59;
 
         if(hours > 1 || hours == 1 && minutes > 0) {
             this.el.hours.textContent = "Noch " + hours.toString().padStart(2, "0") + "h ";
