@@ -1,5 +1,4 @@
 body {
-    background: #999999;
     max-width: 100%;
     margin: auto;
     padding: 64px;
@@ -12,8 +11,7 @@ body {
     text-align: center;
     border-radius: 64px;
     border: none;
-    color: white;
-    background: #8208e6;
+    color: black;
     flex-direction: column;
 }
 
@@ -23,7 +21,7 @@ body {
     color: inherit;
     text-align: center;
     font-size: 128px;
-    padding: 24px 32px;
+    padding-top: 64px;
     border-radius: inherit;
 }
 
@@ -32,11 +30,10 @@ body {
     font-family: sans-serif;
     color: inherit;
     text-align: center;
-    font-size: 56px;
+    font-size: 64px;
     padding-bottom: 64px;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
-    background: #9560c0;
 }
 
 .showTargetTime {
@@ -44,7 +41,5 @@ body {
     font-family: sans-serif;
     color: inherit;
     text-align: center;
-    font-size: 56px;
-    padding-top: 64px;
-    background: #9560c0;
+    font-size: 64px;
 }

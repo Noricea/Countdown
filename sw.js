@@ -3,9 +3,7 @@ self.addEventListener("install", e => {
         caches.open("static").then(cache => {
             return cache.addAll([
                 "./", 
-                "./src/index.js",
-                "./src/master.css", 
-                "./images/logo192.png"
+                "./src/*",
             ]);
         })
     );
