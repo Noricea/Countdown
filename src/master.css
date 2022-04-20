@@ -1,0 +1,52 @@
+body {
+    background: #999999;
+    margin: 24px;
+}
+
+.timer {
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 54px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background: #8208e6;
+}
+
+.showCurrentDate {
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 54px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background: #8208e6;
+}
+
+.showRemainingTime {
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 54px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background: #8208e6;
+}
+
+.showTargetTime {
+    font-family: sans-serif;
+    display: inline-block;
+    text-align: center;
+    font-size: 54px;
+    padding: 24px 32px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+    background: #8208e6;
+}
