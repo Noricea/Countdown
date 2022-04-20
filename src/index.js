@@ -1,3 +1,5 @@
+import cDatePart from "./cDatePart.js";
+
 if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("ServiceWorker registered!");
@@ -7,3 +9,7 @@ if ("serviceWorker" in navigator){
         console.log(error);
     })
 }
+
+new cDatePart(
+    document.querySelector(".showCurrentDate")
+);

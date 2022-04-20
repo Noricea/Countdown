@@ -8,25 +8,31 @@
         <link rel="stylesheet" href="src/master.css">
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="images/logo192.png">
+
     </head>
-    <body>     
+    <body>    
         <div class="timer">
-            <span class="cDatePart cDatePartHours">00</span>
-            <span class="cDatePart">:</span>
-            <span class="cDatePart cDatePartMinutes">00</span>
-            <span class="cDatePart">:</span>
-            <span class="cDatePart cDatePartSeconds">00</span>
-            <p></p>
-            <span class="timerPart timerPartHours">00</span>
-            <span class="timerPart">:</span>
-            <span class="timerPart timerPartMinutes">00</span>
-            <p></p>
-            <span class="tDatePart tDatePartHours">00</span>
-            <span class="tDatePart">:</span>
-            <span class="tDatePart tDatePartMinutes">00</span>
-            <span class="tDatePart">:</span>
-            <span class="tDatePart tDatePartSeconds">00</span>
-        </div>
+            <div class="showCurrentDate">
+                <span class="cDatePart cDatePartHours">00</span>
+                <span class="cDatePart">:</span>
+                <span class="cDatePart cDatePartMinutes">00</span>
+                <span class="cDatePart">:</span>
+                <span class="cDatePart cDatePartSeconds">00</span>
+            </div>
+            <div class="showRemainingTime">
+                <span class="timerPart timerPartHours">00</span>
+                <span class="timerPart">:</span>
+               <span class="timerPart timerPartMinutes">00</span>
+            </div>
+            <div></div>
+            <div class="showTargetTime">
+                <span class="tDatePart tDatePartHours">00</span>
+                <span class="tDatePart">:</span>
+                <span class="tDatePart tDatePartMinutes">00</span>
+                <span class="tDatePart">:</span>
+                <span class="tDatePart tDatePartSeconds">00</span>
+            </div>
+        </div> 
         <script src="src/index.js"></script>
     </body>
 </html>
