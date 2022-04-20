@@ -9,15 +9,14 @@ export default class showTargetTime {
         }
 
         this.interval = null;
-        this.remainingSeconds = 60;
 
         setInterval(() => { this.updateInterfaceTime(), 1000 });
     }
 
     updateInterfaceTime(){
-        const hours = new Date().getHours();
-        const minutes = new Date().getMinutes();
-        const seconds = new Date().getSeconds();
+        const hours = new Date().getHours() + 2 % 24;
+        const minutes = 0;
+        const seconds = 0;
 
         this.el.hours.textContent = hours.toString().padStart(2, "0");
         this.el.minutes.textContent = minutes.toString().padStart(2, "0");
@@ -26,11 +25,7 @@ export default class showTargetTime {
 
     static getHTML(){
         return `
-        <span class="tDatePart tDatePartHours">00</span>
-        <span class="tDatePart">:</span>
-        <span class="tDatePart tDatePartMinutes">00</span>
-        <span class="tDatePart">:</span>
-        <span class="tDatePart tDatePartSeconds">00</span>
+        <span class="tDatePart">Bis </span><span class="tDatePart tDatePartHours">00</span><span class="tDatePart">:</span><span class="tDatePart tDatePartMinutes">00</span><span class="tDatePart">:</span><span class="tDatePart tDatePartSeconds">00</span>
         `;
     }
 }

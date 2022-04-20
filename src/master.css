@@ -1,5 +1,4 @@
 body {
-    max-width: 100%;
     margin: auto;
     padding: 64px;
 }
@@ -16,30 +15,26 @@ body {
 }
 
 .showCurrentDate {
-    display: block;
+    display: flexbox;
     font-family: sans-serif;
     color: inherit;
     text-align: center;
     font-size: 128px;
-    padding-top: 64px;
     border-radius: inherit;
 }
 
-.showRemainingTime {
-    display: block;
+.showTargetTime {
+    display: flexbox;
     font-family: sans-serif;
     color: inherit;
     text-align: center;
     font-size: 64px;
-    padding-bottom: 64px;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
 }
 
-.showTargetTime {
-    display: block;
+.showRemainingTime {
+    display: flexbox;
     font-family: sans-serif;
     color: inherit;
     text-align: center;
-    font-size: 64px;
+    font-size: 48px;
 }

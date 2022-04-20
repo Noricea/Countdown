@@ -1,5 +1,6 @@
 import cDatePart from "./cDatePart.js";
 import showTargetTime from "./showTargetTime.js";
+import showRemainingTime from "./showRemainingTime.js";
 
 if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration => {
@@ -20,5 +21,5 @@ new showTargetTime(
 );
 
 new showRemainingTime(
-    document.querySelector(".showRemainingTime")
+    document.querySelector(".showRemainingTime", 10, 0)
 );

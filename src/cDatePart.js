@@ -9,7 +9,6 @@ export default class cDatePart {
         }
 
         this.interval = null;
-        this.remainingSeconds = 60;
 
         setInterval(() => { this.updateInterfaceTime(), 1000 });
     }
@@ -26,11 +25,7 @@ export default class cDatePart {
 
     static getHTML(){
         return `
-        <span class="cDatePart cDatePartHours">00</span>
-        <span class="cDatePart">:</span>
-        <span class="cDatePart cDatePartMinutes">00</span>
-        <span class="cDatePart">:</span>
-        <span class="cDatePart cDatePartSeconds">00</span>
+        <span class="cDatePart cDatePartHours">00</span><span class="cDatePart">:</span><span class="cDatePart cDatePartMinutes">00</span><span class="cDatePart">:</span><span class="cDatePart cDatePartSeconds">00</span>
         `;
     }
 }
