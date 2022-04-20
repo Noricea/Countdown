@@ -33,7 +33,9 @@ body {
     color: inherit;
     text-align: center;
     font-size: 56px;
-    padding-top: 64px;
+    padding-bottom: 64px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
     background: #9560c0;
 }
 
@@ -43,8 +45,6 @@ body {
     color: inherit;
     text-align: center;
     font-size: 56px;
-    padding-bottom: 64px;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
+    padding-top: 64px;
     background: #9560c0;
 }

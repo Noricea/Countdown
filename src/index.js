@@ -1,4 +1,5 @@
 import cDatePart from "./cDatePart.js";
+import showTargetTime from "./showTargetTime.js";
 
 if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration => {
@@ -12,4 +13,8 @@ if ("serviceWorker" in navigator){
 
 new cDatePart(
     document.querySelector(".showCurrentDate")
+);
+
+new showTargetTime(
+    document.querySelector(".showTargetTime")
 );

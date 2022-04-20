@@ -9,16 +9,21 @@
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="images/logo192.png">
 
+        <style>
+            p {
+                background-image: url("images/bg_fox1.png");
+            }
+        </style>
     </head>
     <body>    
         <div class="timer">
             <div class="showCurrentDate"></div>
+            <div class="showTargetTime"></div>
             <div class="showRemainingTime">
                 <span class="timerPart timerPartHours">00</span>
                 <span class="timerPart">:</span>
                <span class="timerPart timerPartMinutes">00</span>
             </div>
-            <div class="showTargetTime"></div>
         </div> 
         <script src="src/index.js" type="module"></script>
     </body>
