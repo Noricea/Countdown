@@ -1,6 +1,6 @@
-export default class timerPart {
+export default class showRemainingTime {
     constructor(root){
-        root.innerHTML = timerPart.getHTML();
+        root.innerHTML = showRemainingTime.getHTML();
 
         this.el = {
             hours: root.querySelector(".timerPartHours"),
@@ -16,11 +16,9 @@ export default class timerPart {
     updateInterfaceTime(){
         const hours = new Date().getHours();
         const minutes = new Date().getMinutes();
-        const seconds = new Date().getSeconds();
 
         this.el.hours.textContent = hours.toString().padStart(2, "0");
         this.el.minutes.textContent = minutes.toString().padStart(2, "0");
-        this.el.seconds.textContent = seconds.toString().padStart(2, "0");
     }
 
     static getHTML(){
