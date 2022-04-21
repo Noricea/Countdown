@@ -14,7 +14,7 @@ body {
     flex-direction: column;
 }
 
-.showCurrentDate {
+.time {
     display: flexbox;
     font-family: sans-serif;
     color: inherit;
@@ -23,7 +23,7 @@ body {
     border-radius: inherit;
 }
 
-.showTargetTime {
+.target {
     display: flexbox;
     font-family: sans-serif;
     color: inherit;
@@ -31,7 +31,7 @@ body {
     font-size: 64px;
 }
 
-.showRemainingTime {
+.remaining {
     display: flexbox;
     font-family: sans-serif;
     color: inherit;

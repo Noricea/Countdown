@@ -1,7 +1,3 @@
-import cDatePart from "./cDatePart.js";
-import showTargetTime from "./showTargetTime.js";
-import showRemainingTime from "./showRemainingTime.js";
-
 if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("sw.js").then(registration => {
         console.log("ServiceWorker registered!");
@@ -11,17 +7,3 @@ if ("serviceWorker" in navigator){
         console.log(error);
     })
 }
-
-new cDatePart(
-    document.querySelector(".showCurrentDate")
-);
-
-var func = 20;
-
-new showTargetTime(
-    document.querySelector(".showTargetTime", 21)
-);
-
-new showRemainingTime(
-    document.querySelector(".showRemainingTime")
-);
