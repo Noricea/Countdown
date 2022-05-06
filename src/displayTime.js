@@ -1,6 +1,14 @@
 //var tH = $("#time");
+const dateStorageInput = document.querySelector(".dateStorage");
+const timeStorageInput = document.querySelector(".timeStorage");
+const button = document.querySelector(".button")
 
-var targetHour = new Date().getHours() + 2;
+timeStorageInput.value = ((new Date().getHours() + 2) % 24).toString().padStart(2, "0") + ":00";
+dateStorageInput.value = new Date().getFullYear().toString().padStart(4, "0") + "-" + 
+(new Date().getMonth() + 1 + Math.floor(1)).toString().padStart(2, "0") + "-" + 
+new Date().getDate().toString().padStart(2, "0");
+
+var targetHour = 0;
 var targetMinute = 0;
 
 setInterval(() => {
@@ -9,11 +17,7 @@ setInterval(() => {
 setInterval(() => {
     updateRemaining(), 1000
 });
-displayTarget();
-
-function displayTarget(){
-    document.getElementById("target").innerHTML = "Bis " + targetHour.toString().padStart(2, "0") + ":" + targetMinute.toString().padStart(2, "0");
-}
+updateTarget();
 
 function updateTime(){
     var today = new Date();
@@ -26,7 +30,7 @@ function updateRemaining(){
     var totalTime = ((targetHour * 60) + targetMinute) - (today.getHours() * 60 + today.getMinutes());
     var Time;
 
-    if (totalTime < 0){
+    if (totalTime <= 0){
         Time = "Zeit abgelaufen";
     }
     else {
@@ -39,3 +43,23 @@ function updateRemaining(){
     }
     document.getElementById("remaining").innerHTML = Time;
 }
+
+function updateTarget() {
+    if (localStorage.getItem("targetDate")){
+        const dateArray = localStorage.getItem("targetDate").split(":");
+        targetHour = parseInt(dateArray[0]);
+        targetMinute = parseInt(dateArray[1]);
+    }
+    else {
+        targetHour = (new Date().getHours() + 2) % 24;
+        targetMinute = 0;
+    }
+    document.getElementById("target").innerHTML = "Bis " + targetHour.toString().padStart(2, "0") + ":" + targetMinute.toString().padStart(2, "0");
+}
+
+const saveToLocalStorage = () => {
+    localStorage.setItem("targetDate", timeStorageInput.value);
+}
+
+button.addEventListener("click", saveToLocalStorage);
+button.addEventListener("click", updateTarget);
