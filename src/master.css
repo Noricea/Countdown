@@ -3,16 +3,89 @@ body {
     padding: 64px;
 }
 
-.timer {
-    box-sizing: content-box;
-    font-family: sans-serif;
-    display: flex;
-    text-align: center;
-    border-radius: 64px;
-    border: none;
-    color: black;
-    flex-direction: column;
+#topbar {
+  position: fixed;
+  scale: 100%;
+  width: 100%;
+  top:0%;
+  left: 100%;
+  background-color: grey;
+  padding: 4px;
+  transition: 0.5s;
 }
+
+.menu {   
+  background-color: #278cff;
+  right: 16px;
+  top: 16px;
+  position: fixed;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.timer {
+  position: fixed;
+  width: 90%;
+  left: 5%;
+  right: 5%;
+  top: 20%;
+  font-family: sans-serif;
+  color: black;
+}
+
+.dateStorage {
+    background-color: #424242;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 14px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.timeStorage {
+    background-color: #424242;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 13px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.saveBtn {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .resetBtn {
+    background-color: #f44336;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
 .time {
     display: flexbox;

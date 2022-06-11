@@ -12,32 +12,38 @@
         <style>
             body {
                 background-image: url("images/bg_fox1.png");
-                background-repeat: repeat-y;
-                background-size: 125%;
+                background-position-x: center;
+                background-size: 100%;
+                background-repeat: repeat;
             }
         </style>
     </head>
     <body>    
-        <div class="topnav">
+        <div id="topbar">
             <div>
                 <nav>
                     <ul>
-                        <li>
                             <input class="dateStorage" type="date">
-                        </li>
-                        <li>
                             <input class="timeStorage" type="time">
-                        </li>
-                        <li>
-                            <button class="button">Speichern</button>
-                        </li>
+                            <button class="saveBtn">Speichern</button>
+                            <button class="resetBtn">Reset</button>
                     </ul>
                 </nav>
             </div>
         </div>
+        <div>
+            <button class="menu">Menu</button>
+        </div>
         <div class="timer">
             <div class="time">
                 <div id="time"></div>
+            </div>
+            <div class="progress-bg">
+                <div id="progress-bar" style="height:4px;
+                margin-top: -9px;
+                width:100%;
+                border-radius: 2px;
+                background-color: rgb(255, 136, 0);"></div>
             </div>
             <div class="target">
                 <div id="target">00</div>

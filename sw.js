@@ -2,7 +2,13 @@ self.addEventListener("install", e => {
     e.waitUntil(
         caches.open("static").then(cache => {
             return cache.addAll([
-                "./index.html"
+                "./index.html",
+                "./manifest.json",
+                "./src/index.js",
+                "./src/displayTime.js",
+                "./src/master.css",
+                "./images/bg_fox1.png",
+                "./images/logo192.png"
             ]);
         })
     );
